@@ -38,7 +38,7 @@ const Profile1 = () => {
 
   
   const { data: userTenders, isLoading: userTendersLoading, isError: userTendersError } = getMyTendersQuery();
-   if (profileLoading || allTendersLoading || userTendersLoading) {
+   if (profileLoading || allTendersLoading || userTendersLoading||categoriesLoading) {
     return (
       <div style={{ minHeight: '800px', minWidth: '1200px' }}>
         <Loading />
@@ -46,7 +46,7 @@ const Profile1 = () => {
     );
   }
 
-  if (profileError || allTendersError || userTendersError) {
+  if (profileError || allTendersError || userTendersError||categoriesError) {
     return <div>Error loading data.</div>;
   }
 const dummyPriceRanges = [
@@ -220,6 +220,7 @@ const renderStarRating = (rating) => {
                 />
                 <h2 className="text-xl font-semibold">{tender.title}</h2>
                 <p className="text-gray-600 text-sm">{tender.description}</p>
+                <p className="text-gray-400 text-sm mt-2">Reference Id: {tender.id}</p>
                 <p className="text-gray-400 text-sm mt-2">Company: {tender.companyName}</p>
                 <p className="text-gray-400 text-sm">Category: {tender.category}</p>
                 <p className="text-gray-400 text-sm">Cost: {tender.cost}</p>
@@ -293,6 +294,7 @@ const renderStarRating = (rating) => {
                 />
                 <h2 className="text-xl font-semibold">{tender.title}</h2>
                 <p className="text-gray-600 text-sm">{tender.description}</p>
+                <p className="text-gray-400 text-sm mt-2">Reference Id: {tender.id}</p>
                 <p className="text-gray-400 text-sm mt-2">Company: {tender.companyName}</p>
                 <p className="text-gray-400 text-sm">Category: {tender.category}</p>
                 <p className="text-gray-400 text-sm">Cost: {tender.cost}</p>
@@ -406,6 +408,7 @@ theme="light"
                 />
                 <h2 className="text-xl font-semibold">{tender.title}</h2>
                 <p className="text-gray-600 text-sm">{tender.description}</p>
+                <p className="text-gray-400 text-sm mt-2">Reference Id: {tender.id}</p>
                 <p className="text-gray-400 text-sm mt-2">Company: {tender.companyName}</p>
                 <p className="text-gray-400 text-sm">Category: {tender.category}</p>
                 <p className="text-gray-400 text-sm">Cost: {tender.cost}</p>
@@ -606,7 +609,7 @@ theme="light"
                  <div className="p-4 text-center">
        <div className="relative inline-block">
           <img
-            src={userProfile.avatarUrl || 'https://i.pinimg.com/originals/76/ec/75/76ec755f9404d4be609b951aebc80b18.jpg'}
+            src={userProfile.profileImage || 'https://png.pngtree.com/png-vector/20200614/ourlarge/pngtree-businessman-user-avatar-character-vector-illustration-png-image_2242909.jpg'}
             alt={userProfile.name}
             className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
           />
