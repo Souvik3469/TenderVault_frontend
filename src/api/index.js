@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: `http://localhost:5000/v1/`,
+  baseURL: `https://tendervault-backend.onrender.com/v1/`,
   headers: {
     "Content-Type": "application/json",
   },
