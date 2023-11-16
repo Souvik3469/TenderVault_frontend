@@ -4,7 +4,7 @@ import icon1 from "../icons/icon1.png"
 
 function Hero() {
     return (
-        //"Your tenders, your way. Tell us your desired procurement location, and we'll lead you to success." Tell us your destination, and we'll pave the way."
+       
         <div className='w-screen h-[calc(100vh-5rem)]'>
             <div className="bg-cover bg-[url('/public/hero2.png')] bg-center bg-no-repeat h-full w-full" >
                 <div className="container mx-auto flex flex-col my-auto align-middle h-full" >

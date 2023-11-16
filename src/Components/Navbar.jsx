@@ -19,7 +19,6 @@ import {
 } from "@mui/icons-material";
 
 function Navbar() {
-   const [searchTerm, setSearchTerm] = useState('');
 
 
  const { data: userProfile, isLoading: profileLoading, isError: profileError } = GetUserQuery();

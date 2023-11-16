@@ -32,7 +32,7 @@ const GetUserQuery = () =>
     queryFn: () => GetUser(),
     select: (data) => {
       const res = data.message;
-       console.log("User1:",res);
+   
       return res;
 
     },
@@ -47,7 +47,7 @@ const GetVendorQuery = () =>
     queryFn: () => GetVendor(),
     select: (data) => {
       const res = data.message;
-      // console.log("Res:",res);
+   
       return res;
 
     },
@@ -62,7 +62,7 @@ const GetCompanyQuery = () =>
     queryFn: () => GetCompany(),
     select: (data) => {
       const res = data.message;
-       console.log("Res:",res);
+    
       return res;
 
     },
